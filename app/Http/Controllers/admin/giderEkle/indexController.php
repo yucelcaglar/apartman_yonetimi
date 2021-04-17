@@ -16,7 +16,7 @@ class indexController extends Controller
     public function index()
     {
         $data = DB::table('gider_ekles')->distinct()->get();
-        return view('admin.giderEkle.index',['data' => $data]);
+        return view('admin.giderEkle.index', ['data' => $data]);
     }
 
     /**
@@ -28,7 +28,7 @@ class indexController extends Controller
     {
         $dataGider = DB::table('gider_kalemleris')->distinct()->get();
         $dataBlok = DB::table('Bloks')->distinct()->get();
-        return view('admin.giderEkle.create',['dataGider' => $dataGider,'dataBlok'=>$dataBlok]);
+        return view('admin.giderEkle.create', ['dataGider' => $dataGider, 'dataBlok' => $dataBlok]);
     }
 
     /**
